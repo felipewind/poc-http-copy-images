@@ -1,0 +1,28 @@
+<mat-card class="external-card" *ngIf="imageUrlCopy; else imageNotFound">
+  <mat-card-header>
+    <mat-card-title>{{imageUrl}}</mat-card-title>
+    <mat-card-subtitle>{{image?.mediaType}}</mat-card-subtitle>
+  </mat-card-header>
+  <div fxLayout="row" fxLayoutAlign="space-around stretch">
+    <mat-card class="image-card">
+      <mat-card-header>
+        <mat-card-title>Raw Copy</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="imageUrlCopy">
+    </mat-card>
+    <mat-card class="image-card">
+      <mat-card-header>
+        <mat-card-title>Base64</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="imageUrlBase64">
+    </mat-card>
+  </div>
+</mat-card>
+<ng-template #imageNotFound>
+  <mat-card class="external-card">
+    <mat-card-header>
+      <mat-card-title>{{imageUrl}}</mat-card-title>
+      <mat-card-subtitle>Image not found</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</ng-template>

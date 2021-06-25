@@ -15,6 +15,7 @@ export class ImageService {
 
   getBase64(imageUrl: string): Observable<Image> {
     const urlBase64 = `${baseUrl}/base64/${encodeURIComponent(imageUrl)}`;
+    console.log(`${urlBase64}`);
     return this.httpClient.get<Image>(urlBase64);
   }
 

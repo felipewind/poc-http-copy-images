@@ -1,45 +1,5 @@
-<mat-card class="search-card">
-  <form (ngSubmit)="loadImage()">
-    <mat-form-field class="url-width">
-      <input matInput placeholder="Image URL" type="url" [(ngModel)]="imageUrl" name="imageUrl">
-    </mat-form-field>
+<app-search (search)="loadImage($event)"></app-search>
 
-    <button mat-raised-button color="primary">Load Image</button>
-  </form>
-</mat-card>
-<div fxLayout="row" fxLayoutAlign="space-around center" class="image-line">
-  <mat-card>
-    <img mat-card-image src="http://localhost:8090/image/earth.png">
-  </mat-card>
-  <mat-card>
-    <img mat-card-image src="http://localhost:8090/image/moon.jpg">
-  </mat-card>
+<div *ngFor="let imageUrl of imagesUrl">
+    <app-image [imageUrl]="imageUrl"></app-image>
 </div>
-
-
-<!-- <div fxLayout="row" fxLayoutAlign="space-around center" class="image-line">
-  <img class="image-card" src="http://localhost:8090/image/earth.png">
-  <img class="image-card" src="http://localhost:8090/image/moon.jpg">
-</div> -->
-
-<!-- <mat-card>
-  <form (ngSubmit)="loadImage()">
-    <mat-form-field class="parcial-width">
-      <input matInput placeholder="Image URL" type="url" [(ngModel)]="imageUrl" name="imageUrl">
-    </mat-form-field>
-
-    <button mat-raised-button color="primary">Load Image</button>
-  </form>
-</mat-card> -->
-<!-- <div fxLayout="row" fxLayoutAlign="space-around center" >
-  <mat-card class="image-card">
-    <mat-card-content>
-      <img mat-card-image src="http://localhost:8090/image/earth.png">
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="image-card">
-    <mat-card-content>
-      <img mat-card-image src="http://localhost:8090/image/moon.jpg">
-    </mat-card-content>
-  </mat-card>
-</div> -->

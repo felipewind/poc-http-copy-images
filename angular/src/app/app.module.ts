@@ -10,10 +10,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { SearchComponent } from './components/search/search.component';
+import { ImageComponent } from './components/image/image.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

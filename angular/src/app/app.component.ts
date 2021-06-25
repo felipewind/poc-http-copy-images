@@ -1,4 +1,3 @@
-import { ImageService } from './image.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,15 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-  imageUrl: string = '';
+export class AppComponent { 
   
-  constructor(private imageService: ImageService) {
+  imagesUrl: string[] = [];
+  
+  constructor() {
   }
 
-  loadImage(): void {
-
+  loadImage($event: string): void {
+    console.log(`search image=${$event}`);
+    this.imagesUrl.unshift($event);
   }
 
 }
