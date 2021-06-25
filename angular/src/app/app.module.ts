@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,17 @@
-.parcial-width {
-    width: 25%;
-  }
+.search-card {
+  margin: 20px;
+}
+/* 
+.image-line {
+  margin: 20px;
+} */
+
+.url-width {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.image-card {
+  max-width: 25%;
+  max-height: 25%;
+}
