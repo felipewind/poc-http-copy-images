@@ -19,5 +19,18 @@ Angular will have one input where the user can type the URL of the image to be c
 To simplify the tests, there's one Quarkus mock-server that provides images in this formats: png, svg+xml and jpeg.
 
 
+# mock
+
+Images that the mock will provide locally and the URL version using the copy:
+
+http://localhost:8090/image/earth.png
+- http://localhost:8080/image/copy/http%3A%2F%2Flocalhost%3A8090%2Fimage%2Fearth.png
+
+http://localhost:8090/image/moon.jpg
+- http://localhost:8080/image/copy/http%3A%2F%2Flocalhost%3A8090%2Fimage%2Fmoon.jpg
+
+http://localhost:8090/image/solarsystem.svg
+- http://localhost:8080/image/copy/http%3A%2F%2Flocalhost%3A8090%2Fimage%2Fsolarsystem.svg
+
 
 

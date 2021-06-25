@@ -1,0 +1,9 @@
+<mat-card>
+  <form (ngSubmit)="loadImage()">
+    <mat-form-field class="parcial-width">
+      <input matInput placeholder="Image URL" type="url" [(ngModel)]="imageUrl" name="imageUrl">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Load Image</button>
+  </form>
+</mat-card>
