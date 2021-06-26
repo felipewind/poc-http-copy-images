@@ -16,17 +16,29 @@ export class ImageComponent implements OnInit {
   imageUrlBase64: SafeResourceUrl = {};
   image: Image = { mediaType: '', encodedImage: '' };
 
+  imageStatus: string = '';
+
+  errorMessage: string = '';
+
   constructor(private imageService: ImageService) {
     this.imageUrl = '';
   }
 
   ngOnInit(): void {
+    this.imageStatus = 'loading';
     console.log(`${this.imageUrl}`);
-    this.imageService.getBase64(this.imageUrl).subscribe(image => {
-      this.image = image;
-      this.imageUrlBase64 = this.imageService.getSanitizedUrl(image);
-      this.imageUrlCopy = this.imageService.getUrlCopy(this.imageUrl);
-    })
+    this.imageService.getBase64(this.imageUrl).subscribe(
+      (image) => {
+        this.image = image;
+        this.imageUrlCopy = this.imageService.getUrlCopy(this.imageUrl);        
+        this.imageUrlBase64 = this.imageService.getSanitizedUrl(image);
+        this.imageStatus = 'loaded';
+      },
+      (error) => {
+        console.log(`${JSON.stringify(error)}`);        
+        this.imageStatus = 'error';
+        this.errorMessage = `status:${error.status} statusText:${error.statusText} message:${error.message}`;
+      });
   }
 
 }
