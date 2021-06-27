@@ -2,6 +2,8 @@
 
 A simple POC where Angular requests the URL of an image to the Quarkus back end renders the image in the screen. Quarkus returns the image in two ways: (1) a simple copy from the URL of the image; (2) the image encoded in Base64 with the Media Type.
 
+![image](./docs/images/poc-http-copy-images.png)
+
 # Hypothetical problem to solve
 
 Let's imagine a hypothetical situation where only the backend have access to the URL of some images and you want to render these images on the frontend.
