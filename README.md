@@ -1,6 +1,6 @@
 # poc-http-copy-images
 
-A simple POC where Angular requests the URL of an image to the Quarkus back end and then renders the image in the screen. Quarkus returns the image in two ways: (1) a simple copy from the URL of the image; (2) the image encoded in Base64 with the Media Type.
+A simple POC where Angular sends the URL of an image to the Quarkus back end and then renders the image returned A simple POC where Angular sends the URL of an image to the Quarkus back end and then renders the image returned in the screen. The image is returned by Quarkus in one endpoint as a raw copy and in another endpoint encoded in Base64.in the screen. Quarkus returns the image in two ways: (1) a simple copy from the URL of the image; (2) the image encoded in Base64 with the Media Type.
 
 ![image](./docs/images/poc-http-copy-images.png)
 
